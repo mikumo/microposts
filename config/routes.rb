@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :settings, only: [:edit, :update]
   resources :users, only: [:index, :show]
   resources :microposts
+  resources :relationships, only: [:create, :destroy]
 end
