@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20160617070542) do
     t.text     "summary"
     t.string   "purpose"
     t.string   "target"
-    t.integer  "period"
+    t.string   "period"
     t.string   "place"
-    t.integer  "reward"
+    t.string   "reward"
     t.text     "qualification"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
