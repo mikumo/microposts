@@ -15,9 +15,15 @@ ActiveRecord::Schema.define(version: 20160617070542) do
 
   create_table "microposts", force: :cascade do |t|
     t.integer  "user_id"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "summary"
+    t.string   "purpose"
+    t.string   "target"
+    t.integer  "period"
+    t.string   "place"
+    t.integer  "reward"
+    t.text     "qualification"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
@@ -35,8 +41,11 @@ ActiveRecord::Schema.define(version: 20160617070542) do
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "company_name"
+    t.string   "company_link"
     t.string   "email"
+    t.string   "name"
+    t.string   "department_name"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

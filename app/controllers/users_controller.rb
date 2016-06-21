@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to the Co-creation Place"
       redirect_to @user
     else
       render 'new'
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :location,
+    params.require(:user).permit(:company_name, :company_link,:email, :password, :location,
                                  :password_confirmation)
   end
 

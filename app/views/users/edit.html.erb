@@ -1,18 +1,28 @@
-<h1>user-profile</h1>
+<h1>登録情報</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %> <!-- ここを追加 -->
 
-      <%= f.label :name %>
+      <%= f.label :企業名 %>
+      <%= f.text_field :company_name, class: 'form-control' %>
+      
+      <%= f.label :所在地 %>
+      <%= f.text_field :location, class: 'form-control' %>
+      
+      <%= f.label :担当者名 %>
       <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :部署%>
+      <%= f.text_field :department_name, class: 'form-control' %>
+      
+      <%= f.label :リンク%>
+      <%= f.text_field :company_link, class: 'form-control' %>      
 
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
       
-      <%= f.label :location %>
-      <%= f.text_field :location, class: 'form-control' %>
       
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
@@ -20,7 +30,7 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Create my profile", class: "btn btn-primary" %>
+      <%= f.submit "Create comapany profile", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

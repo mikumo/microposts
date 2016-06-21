@@ -1,7 +1,14 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_area :summary, placeholder: "プロジェクトの概要..." %>
+    <%= f.text_field :purpose, placeholder: "プロジェクトの目的..." %>
+    <%= f.text_field :target, placeholder: "プロジェクトの対象..." %>
+    <%= f.text_field :period, placeholder: "プロジェクトの期間(月/年)..." %>
+    <%= f.text_field :place, placeholder: "プロジェクトの会議場所/開催場所..." %>    
+    <%= f.text_field :reward, placeholder: "プロジェクトの報酬(￥)..." %>    
+    <%= f.text_area :qualification, placeholder: "プロジェクトの応募資格..." %> 
+    
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= f.submit "Post", class: "btn btn-primary " %>
 <% end %>
